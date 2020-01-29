@@ -1,0 +1,26 @@
+{
+  "name": "ccap-codegen",
+  "version": "0.0.1",
+  "description": "Node interface to purescript-ccap-codegen",
+  "main": "index.js",
+  "repository": "https://github.com/ccap/ccap-codegen",
+  "author": "Philip Wales <Philip.Wales@wicourts.gov>",
+  "license": "NONE",
+  "private": true,
+  "scripts": {
+    "postinstall": "node index.js v0.0.6"
+  },
+  "bin": {
+    "codegen": "codegen",
+    "get-schema": "get-schema"
+  },
+  "dependencies": {
+    "decimal.js": "^10.2.0",
+    "download-github-release": "^0.3.2",
+    "pg": "^7.18.0",
+    "yargs": "^15.1.0"
+  },
+  "devDependencies": {
+    "javascript-typescript-langserver": "^2.11.3"
+  }
+}
