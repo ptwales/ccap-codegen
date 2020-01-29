@@ -1,6 +1,6 @@
 {
   "name": "ccap-codegen",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "description": "Node interface to purescript-ccap-codegen",
   "main": "index.js",
   "repository": "https://github.com/ccap/ccap-codegen",
@@ -15,10 +15,8 @@
     "get-schema": "get-schema"
   },
   "dependencies": {
-    "decimal.js": "^10.2.0",
     "download-github-release": "^0.3.2",
-    "pg": "^7.18.0",
-    "yargs": "^15.1.0"
+    "purescript-ccap-codegen": "https://github.com/ptwales/purescript-ccap-codegen.git#bundle"
   },
   "devDependencies": {
     "javascript-typescript-langserver": "^2.11.3"
