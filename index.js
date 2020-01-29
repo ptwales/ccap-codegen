@@ -8,16 +8,20 @@ if (process.argv.length < 3) {
   process.exit(1);
 }
 
-const codegenVersion = process.argv[2];
-
-const filterRelease = (release) => release.tag_name === codegenVersion;
+const version = process.argv[2];
 
 const user = 'ccap';
+
 const repo = 'purescript-ccap-codegen';
-downloadGithubRelease(user, repo, 'src', filterRelease)
-  .then(() => console.log('All done!'))
+
+const isVersion = (release) => release.tag_name === version;
+
+const isZip = (asset) => asset.name.endsWith('.zip');
+
+downloadGithubRelease(user, repo, process.env.PWD, isVersion, isZip)
   .catch((err) => {
-    console.error(err.message);
+    console.error('');
+    console.error("Failed to install codegen!", err.message);
     process.exit(1);
   });
 
